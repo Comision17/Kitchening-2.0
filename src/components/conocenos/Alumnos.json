@@ -1,0 +1,131 @@
+[
+    {
+        "nombre":"Alen Long",
+        "imagen":"Toto Long.jpg",
+        "alt" : "no hay foto !"
+    },
+    {
+        "nombre":"Mercedes Alvarez ",
+        "imagen":"mercedes.png",
+        "alt" : "La loca de los gatos"
+    },
+    {
+        "nombre": "Mauricio R.",
+        "imagen":"mauricio.jpg",
+        "alt" : "foto de la foto"
+    },
+    {
+        "nombre":"German Insaurralde",
+        "imagen":"german.jpg",
+        "alt" : "no foto"
+    },
+    {
+        "nombre":"Nicolás Ruiz",
+        "imagen":"nicolas.jpeg",
+        "alt" : "imagen"
+    },
+    {
+        "nombre":"Lucas Cordoba",
+        "imagen":"lucas.jpg",
+        "alt" : "nop foto"
+    },
+    {
+        "nombre":"Nadia Ortiz"
+    },
+    {
+        "nombre":"DylanRockSoul",
+        "imagen":"abel.jpg",
+        "alt" : "Open your heart facing the vandalization, Live and learn with His World , Reach your endless possibilities and go for that One Way Dream"
+    },
+    {
+        "nombre": "Jose Contreras", 
+        "imagen":"jose.jpg",
+        "alt":"power rangers rojo"
+    },
+    {
+        "nombre" :"Mariana Blanez",
+        "imagen" :"mariana.jpg",
+        "alt" : "Foto para el cv"
+    },
+    {
+        "nombre":"Melanie Rosi"
+    },
+    {
+        "nombre" : "Ulises Mendez" ,
+        "imagen" :"ulises.jpg",
+        "alt" : "Ulises bueno xd"
+
+    },
+    {
+        "nombre":"Maria Servin",
+        "imagen": "mariaServin.jpg"
+    },
+    {
+        "nombre" :"Sofia Spinelli" ,
+        "imagen" :"sofia.jpeg",
+        "alt" : "en la plaza!"
+    },
+    {
+        "nombre":"Dilan Martinez"
+    },
+    {
+        "nombre":"Martin Avendaño"
+    },
+    {
+        "nombre":"Patricio Cristaldo"
+    },
+    {
+        "nombre":"Gerardo Matias"
+    },
+    {
+        "nombre":"Joaquin Leguizamon",
+        "imagen": "Joaquin.jpg"
+    },
+    {
+        "nombre":"Micaela Loureiro",
+        "imagen":"Mica.jpg",
+        "alt" : "developers full stack (?"
+    },
+    {
+        "nombre" :"Fernando Borquez", 
+        "imagen" :"foto1.jpg",
+        "alt" : "foto decente xd"
+    },
+    {
+        "nombre" :"Leandro Rios" ,
+        "imagen" :"leandro.jpg" ,
+        "alt" :"se dice atómico!"        
+    },
+    {
+        "nombre" : "soolange " ,
+        "imagen" :"sol.jpg",
+        "alt" : "falsacasual"        
+    },
+    {
+        "nombre":"Brian Gonzalez",
+        "alt" : "nose jajaja lo ke venga"
+    },
+    {
+        "nombre":"Facu Olave",
+        "imagen": "facuu.jpg"
+    },
+    {
+        "nombre":"Melanie Lezcano"
+    },
+    {
+        "nombre":"Terminator",
+        "imagen":"IMG-20211207-WA0028.jpg",
+        "alt" : "Hasta la vista Baby"
+    },
+    {
+        "nombre":"Bill Gates",
+        "imagen":"IMG-20211207-WA0029.jpg",
+        "alt" : "Activa tu windows"
+    },
+    {
+        "nombre":"Jhon Romero",
+        "imagen":"IMG-20211207-WA0030.jpg",
+        "alt" : "Funciona en todos lados"
+    }
+    
+]

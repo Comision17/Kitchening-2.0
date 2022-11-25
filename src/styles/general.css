@@ -20,4 +20,6 @@ html{
 .home{
     width: 94%;
     margin: 0 auto;
+    position: relative;
+    height: 100vh;
 }

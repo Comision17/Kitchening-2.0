@@ -1,0 +1,120 @@
+
+.carta .contenedor-botones{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.carta .contenedor-botones .botonera{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.carta .contenedor-botones .botonera:hover{
+    transform: scale(1.2);
+}
+.carta .contenedor-botones .botonera:nth-child(3){
+    width: 100%;
+}
+.carta .contenedor-botones .botonera img{
+    width: 70px;
+    background-color: #969696ba;
+    border-radius: 50%;
+    padding: 10px;
+    border-style: none;
+}
+.carta .contenedor-botones .botonera input{
+    display: none;
+}
+.carta .contenedor-botones .botonera p{
+    text-align: center;
+}
+
+.carta .productos .entradas .productos-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.carta .productos .entradas img {
+    width: 100%;
+}
+.carta .productos .entradas article{
+    width: 80%;
+    background-color: #abb3d080;
+    backdrop-filter: blur(1px) ;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+    height: 430px;
+}
+.carta .productos .entradas article .imagenes{
+    position: relative;
+}
+.carta .productos .entradas article .imagenes .celiaco{
+    width: 50px;
+    position: absolute;
+    top: 0;
+}
+.carta .productos .entradas article .imagenes .veg{
+    width: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.carta .productos .entradas article .imagenes img{
+    width: 100%;
+}
+.carta .productos .entradas article .contenido{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    height: 115px
+}
+.carta .productos .entradas article .contenido h4{
+    text-transform: uppercase;
+}
+.carta .productos .entradas article .contenido button{
+    text-transform: uppercase;
+    background-color: white;
+    color: var(--colorGris);
+    border: none;
+    padding: 10px;
+    margin: 2px 0;
+}
+.carta .productos .entradas article .contenido button:hover{
+    background-color: rgb(205, 80, 80);
+    color:  white;
+}
+@media (min-width:425px) {
+    .carta .productos .entradas article{
+        width: 45%;
+    }
+}
+@media (min-width:769px) {
+    .carta .productos .entradas article{
+        width: 24%;
+    }
+    .carta .contenedor-botones .botonera{
+        width: 20%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .carta .contenedor-botones .botonera:nth-child(3){
+        width: 20%;
+    }
+}
+

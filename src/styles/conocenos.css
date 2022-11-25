@@ -1,0 +1,96 @@
+
+.conocenos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.conocenos h2{
+    width: 100%;
+    text-align: center;
+}
+.conocenos .personas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.conocenos .boton button {
+    margin-top: 20px;
+    width: 150px;
+    border: none;
+    background-color: var(--colorGris);
+    padding: 10px;
+    margin: 2px 0;
+    font-size: 68%;
+    color: var(--colorBlanco);
+    text-transform: uppercase;
+}
+
+.conocenos .personas .persona{
+    text-align: center;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.conocenos .personas .persona .profile-picture{
+    width: 150px;
+    border-radius: 50%;
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+}
+/* .conocenos .personas .persona img{
+    border-radius: 50%;
+    width: 80%;
+} */
+
+@media (min-width:769px) {
+    .conocenos{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 20px 0;
+    }
+    
+    .conocenos .titular{
+        text-align: center;
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+    .conocenos .titular h3 {
+        width: 85%;
+    }
+    .conocenos .titular p {
+        width: 60%;
+        margin: 20px 0;
+    }
+    .conocenos .boton{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .conocenos .boton button{
+        width: 250px;
+    }
+    
+    .conocenos .personas{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .conocenos .personas .persona{
+        text-align: center;
+        width: 30%;
+    }
+}

@@ -17,7 +17,7 @@ function Entradas(props) {
                 :
                 null
             }
-            <img src={`/images/productos/${props.imagen}`} alt={props.imagen} />
+            <img src={`/images/productos/entradas/${props.imagen}`} alt={props.imagen} />
         </div>
         <div className='contenido'>
             <h4>{props.nombre}</h4>

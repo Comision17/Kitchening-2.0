@@ -77,11 +77,16 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
-    height: 115px
+    height: 185px;
 }
 .carta .productos .entradas article .contenido h4{
     text-transform: uppercase;
+}
+.carta .productos .entradas article .contenido span{
+    text-align: center;
+    font-size: 20px;
+    color:var(--colorAzul) ;
+    width: 100%;
 }
 .carta .productos .entradas article .contenido button{
     text-transform: uppercase;

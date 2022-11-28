@@ -83,6 +83,7 @@ function Carta() {
                   veg = {entrada.veg}
                   descripcion = {entrada.descripcion}
                   precio = {entrada.precio}
+                  imagen = {entrada.imagen !== null ? entrada.imagen : "entrada por defecto.jpg"}
                 />
               )
             }

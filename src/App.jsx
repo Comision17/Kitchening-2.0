@@ -6,6 +6,8 @@ import Footer from "./components/partials/Footer";
 import Main from "./components/home/Main";
 import Conocenos from "./components/conocenos/Conocenos";
 import Carta from "./components/Carta/Carta";
+import Admin from "./components/Admin/Admin";
+import Formulario from "./components/Admin/Formulario"
 import './styles/estilos.css'
 
 function App() {
@@ -26,7 +28,10 @@ function App() {
                 <Route path='/about' element={<Conocenos />}/>
                 {/* Conocenos */}
                 <Route path='/carta' element={<Carta />}/>
-
+                {/* Conocenos */}
+                <Route path='/admin' element={<Admin />}/>
+                {/* Conocenos */}
+                <Route path='/admin/crear/:categoria' element={<Formulario />}/>
 
             </Routes>
           <Footer>

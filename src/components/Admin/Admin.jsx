@@ -42,7 +42,7 @@ function Admin() {
 
     const [carta , setCarta] = useState([])
     const [loading , setLoading] = useState(true)
-    const [value, setValue] = useState('1');
+    const [value, setValue] = useState(0);
     const [secondary, setSecondary] = useState(false);
 
     useEffect(() => {
@@ -52,7 +52,7 @@ function Admin() {
         setCarta(valores.data);
         setTimeout(() => {
             setLoading(false)
-        }, 5000);
+        }, 2000);
         })
         .catch(error => console.log(error))
     }, [loading])
@@ -115,6 +115,9 @@ function Admin() {
       </TabPanel>
       <TabPanel value={value} index={1}>
         <h1>Bebidas</h1>
+        <NavLink to="/admin/crear/bebida">
+            <Button variant="contained" color="success">Crear bebida</Button>
+        </NavLink>
         <div>
             {
                 loading ? 
@@ -142,6 +145,9 @@ function Admin() {
       </TabPanel>
       <TabPanel value={value} index={2}>
         <h1>Guarniciones</h1>
+        <NavLink to="/admin/crear/guarnicion">
+            <Button variant="contained" color="success">Crear guarnicion</Button>
+        </NavLink>
         <div>
             {
                 loading ? 
@@ -169,6 +175,9 @@ function Admin() {
       </TabPanel>
       <TabPanel value={value} index={3}>
         <h1>Postres</h1>
+        <NavLink to="/admin/crear/postre">
+            <Button variant="contained" color="success">Crear postre</Button>
+        </NavLink>
         <div>
             {
                 loading ? 
@@ -196,7 +205,9 @@ function Admin() {
       </TabPanel>
       <TabPanel value={value} index={4}>
         <h1>Platos</h1>
-
+        <NavLink to="/admin/crear/plato">
+            <Button variant="contained" color="success">Crear plato</Button>
+        </NavLink>
         <div>
             {
                 loading ? 

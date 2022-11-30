@@ -1,0 +1,27 @@
+.home .Crear-Producto h1{
+    text-transform: uppercase;
+
+}
+.home .Crear-Producto form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 475px;
+    align-items: center;
+    margin: 0 auto 40px;
+}
+.home .Crear-Producto form .form-control{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 350px;
+    align-items: center;
+    margin: 20px auto;
+}
+.home .Crear-Producto form .form-control select{
+    width: 350px;
+    margin: 10px 0;
+}
+.home .Crear-Producto form .MuiFormControl-root.css-1nrlq1o-MuiFormControl-root{
+    width: 350px;
+}

@@ -6,8 +6,13 @@ import Footer from "./components/partials/Footer";
 import Main from "./components/home/Main";
 import Conocenos from "./components/conocenos/Conocenos";
 import Carta from "./components/Carta/Carta";
+
+/* administrador */
 import Admin from "./components/Admin/Admin";
+import CreacionProductos from "./components/Admin/CreacionProductos";
 import Formulario from "./components/Admin/Formulario"
+import FormularioEdicion from "./components/Admin/FormularioEdicion"
+
 import './styles/estilos.css'
 
 function App() {
@@ -28,10 +33,12 @@ function App() {
                 <Route path='/about' element={<Conocenos />}/>
                 {/* Conocenos */}
                 <Route path='/carta' element={<Carta />}/>
-                {/* Conocenos */}
+                {/* Admin */}
                 <Route path='/admin' element={<Admin />}/>
-                {/* Conocenos */}
+                <Route path='/admin/productos' element={<CreacionProductos />}/>
                 <Route path='/admin/crear/:categoria' element={<Formulario />}/>
+                <Route path='/admin/editar/:categoria/:id' element={<FormularioEdicion />}/>
+                {/* Conocenos */}
 
             </Routes>
           <Footer>

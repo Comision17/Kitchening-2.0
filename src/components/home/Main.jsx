@@ -53,7 +53,7 @@ function Main() {
         <div className="banner">
             <img src="/images/img-banner.jpg" alt="" />
         </div>
-        <section>
+        <section className='mostrar-productos'>
 
           {productos.map((producto,index) => 
           

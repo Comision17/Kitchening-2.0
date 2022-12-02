@@ -1,239 +1,105 @@
 import React, { useState, useEffect } from 'react'
-import Box from '@mui/material/Box';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import PropTypes from 'prop-types';
-import Typography from '@mui/material/Typography';
-import Skeleton from '@mui/material/Skeleton';
-import Lista from './Lista';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import Button from '@mui/material/Button';
 import { NavLink } from 'react-router-dom'
-
-function TabPanel(props) {
-    const { children, value, index, ...other } = props;
-  
-    return (
-      <div
-        role="tabpanel"
-        hidden={value !== index}
-        id={`simple-tabpanel-${index}`}
-        aria-labelledby={`simple-tab-${index}`}
-        {...other}
-      >
-        {value === index && (
-          <Box sx={{ p: 3 }}>
-            <Typography>{children}</Typography>
-          </Box>
-        )}
-      </div>
-    );
-  }
-  
-  TabPanel.propTypes = {
-    children: PropTypes.node,
-    index: PropTypes.number.isRequired,
-    value: PropTypes.number.isRequired,
-  };
-  
+import imagen from '../../assets/document-insertar.png'
 
 function Admin() {
 
-    const [carta , setCarta] = useState([])
-    const [loading , setLoading] = useState(true)
-    const [value, setValue] = useState(0);
-    const [secondary, setSecondary] = useState(false);
-
-    useEffect(() => {
-        fetch("http://localhost:4000/productos")
-        .then((response) => response.json())
-        .then((valores) => {
-        setCarta(valores.data);
-        setTimeout(() => {
-            setLoading(false)
-        }, 2000);
-        })
-        .catch(error => console.log(error))
-    }, [loading])
-    
-    console.log(value)
-
-    const handleChange = (event, newValue) => {
-      setValue(newValue);
-    };
-
   return (
-    <Box sx={{ width: '100%' }}>
-      <Box>
-      <Tabs value={value} onChange={handleChange} centered>
-        <Tab label="Entradas" />
-        <Tab label="Bebidas" />
-        <Tab label="Guarniciones" />
-        <Tab label="Postres" />
-        <Tab label="Platos" />
-      </Tabs>
-      </Box>
-        <FormControlLabel
-                control={
-                    <Checkbox
-                        checked={secondary}
-                        onChange={(event) => setSecondary(event.target.checked)}
-                    />
-                }
-                label="Mostrar Descripcion"
-        />
-      <TabPanel value={value} index={0}>
-        <h1>Entradas</h1>
-        <NavLink to="/admin/crear/entrada">
-            <Button variant="contained" color="success">Crear entrada</Button>
-        </NavLink>
-        <div>
-            {
-                loading ? 
-
-                <div>
-                    <Skeleton />
-                    <Skeleton animation="wave" />
-                    <Skeleton animation={false} />
-                </div>
-
-                :
-
-                carta[0].entradas.map(entrada => 
-                    <Lista 
-                        imagen = {entrada.imagen}
-                        nombre = {entrada.nombre}
-                        categoria = "entradas"
-                        descripcion = {`${entrada.descripcion}`}
-                        secondary = {secondary}
-                        setSecondary = {setSecondary}
-                    />
-                )
-            }
+    <main className='Dashboard'>
+      <section className="statis">
+        <div className="box">
+          <i className="far fa-eye"></i>
+          <h3>5,154</h3>
+          <p className="lead">Visitas a la Web</p>
         </div>
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <h1>Bebidas</h1>
-        <NavLink to="/admin/crear/bebida">
-            <Button variant="contained" color="success">Crear bebida</Button>
-        </NavLink>
-        <div>
-            {
-                loading ? 
-
-                <div>
-                    <Skeleton />
-                    <Skeleton animation="wave" />
-                    <Skeleton animation={false} />
-                </div>
-
-                :
-
-                carta[0].bebidas.map(bebida => 
-                    <Lista 
-                        imagen = {bebida.imagen}
-                        nombre = {bebida.nombre}
-                        categoria = "bebidas"
-                        descripcion = {`${bebida.litrosDimensionales}ml`}
-                        secondary = {secondary}
-                        setSecondary = {setSecondary}
-                    />
-                )
-            }
+        <div className="box">
+          <i className="far fa-user"></i>
+          <h3>245</h3>
+          <p className="lead">Usuarios Registrados</p>
         </div>
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <h1>Guarniciones</h1>
-        <NavLink to="/admin/crear/guarnicion">
-            <Button variant="contained" color="success">Crear guarnicion</Button>
-        </NavLink>
-        <div>
-            {
-                loading ? 
-
-                <div>
-                    <Skeleton />
-                    <Skeleton animation="wave" />
-                    <Skeleton animation={false} />
-                </div>
-
-                :
-
-                carta[0].guarniciones.map(guarnicion => 
-                    <Lista 
-                        imagen = {guarnicion.imagen}
-                        nombre = {guarnicion.nombre}
-                        categoria = "guarniciones"
-                        descripcion = {`${guarnicion.aderesos}`}
-                        secondary = {secondary}
-                        setSecondary = {setSecondary}
-                    />
-                )
-            }
+        <div className="box">
+          <i className="fas fa-shopping-cart"></i>
+          <h3>5,154</h3>
+          <p className="lead">Cantidad de Productos</p>
         </div>
-      </TabPanel>
-      <TabPanel value={value} index={3}>
-        <h1>Postres</h1>
-        <NavLink to="/admin/crear/postre">
-            <Button variant="contained" color="success">Crear postre</Button>
-        </NavLink>
-        <div>
-            {
-                loading ? 
-
-                <div>
-                    <Skeleton />
-                    <Skeleton animation="wave" />
-                    <Skeleton animation={false} />
-                </div>
-
-                :
-
-                carta[0].postres.map(postre => 
-                    <Lista 
-                        imagen = {postre.imagen}
-                        nombre = {postre.nombre}
-                        categoria = "postres"
-                        descripcion = {`${postre.descripcion}`}
-                        secondary = {secondary}
-                        setSecondary = {setSecondary}
-                    />
-                )
-            }
+        <div className="box">
+          <i className="far fa-envelope"></i>
+          <h3>5,154</h3>
+          <p className="lead">Mensajes</p>
         </div>
-      </TabPanel>
-      <TabPanel value={value} index={4}>
-        <h1>Platos</h1>
-        <NavLink to="/admin/crear/plato">
-            <Button variant="contained" color="success">Crear plato</Button>
-        </NavLink>
-        <div>
-            {
-                loading ? 
-
-                <div>
-                    <Skeleton />
-                    <Skeleton animation="wave" />
-                    <Skeleton animation={false} />
-                </div>
-
-                :
-
-                carta[0].platos.map(platos => 
-                    <Lista 
-                        imagen = {platos.imagen}
-                        nombre = {platos.nombre}
-                        categoria = "platos"
-                        descripcion = {`${platos.descripcion}`}
-                        secondary = {secondary}
-                        setSecondary = {setSecondary}
-                    />
-                )
-            }
+      </section>
+      <section className='separador'>
+            <h3>ADMINISTRACION</h3>
+            <p>administrar de forma sencilla tu propia pagina</p>
+      </section>
+      <section className='admin'>
+        {/* Banner */}
+        <div className="box">
+        <NavLink to="/admin/banners">
+            <i className="fas fa-images icon"></i>
+            <h4>Banner</h4>
+            <p>Modificar banners </p>
+            <div className="background_hover"> </div>
+            </NavLink>
         </div>
-      </TabPanel>
-    </Box>
+
+        {/* Usuarios */}
+        <div className="box">
+          <NavLink to="/admin/usuarios">
+            <i className="fas fa-users icon"></i>
+            <h4>Usuario</h4>
+            <p> Modificar Usuarios </p>
+            <div className="background_hover"> </div>
+          </NavLink>
+        </div>
+        {/* Productos */}
+          <div className="box">
+              <NavLink to="/admin/productos">
+                <i className="fas fa-shopping-cart icon"></i>
+                <h4>Productos</h4>
+                <p> Modificar Productos </p>
+                <div className="background_hover"> </div>
+              </NavLink>
+          </div>
+        {/* Mensajes */}
+            <div className="box">
+            <NavLink to="/admin/mensajes">
+                <i className="fas fa-envelope icon"></i>
+                <h4>Mensajes</h4>
+                <p> Responder Mensajes </p>
+                <div className="background_hover"> </div>
+                </NavLink>
+            </div>
+        {/* Menu del Dia */}
+            <div className="box-menu">
+                <h4>Menu Del dia</h4>
+            <NavLink to="/admin/productoDelDia">
+                <article className='producto'>
+                  <img src={imagen} alt="" />
+                  <h5>Entrada</h5>
+                </article>
+              </NavLink>
+              <NavLink to="/admin/productoDelDia">
+                <article className='producto'>
+                  <img src={imagen} alt="" />
+                  <h5>Bebida</h5>
+                </article>
+                </NavLink>
+                <NavLink to="/admin/productoDelDia">
+                <article className='producto'>
+                  <img src={imagen} alt="" />
+                  <h5>Plato</h5>
+                </article>
+                </NavLink>
+                <NavLink to="/admin/productoDelDia">
+                <article className='producto'>
+                  <img src={imagen} alt="" />
+                  <h5>Postre</h5>
+                </article>
+                </NavLink>
+            </div>
+      </section>
+    </main>
   )
 }
 

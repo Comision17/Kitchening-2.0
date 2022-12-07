@@ -197,7 +197,9 @@ function FormularioEdicion() {
             </div>
         }
         <div className='form-control'>
-          <button type='submit'>Crear Nuevo Producto</button>
+          <button type='submit'>
+            Editar Producto
+          </button>
         </div>
       </form>
     </section>

@@ -1,0 +1,76 @@
+main.banners {
+    
+}
+main.banners section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+main.banners section h2{
+    width: 100%;
+}
+main.banners section img{
+    width: 100%;
+}
+main.banners section .elemento{
+    width: 100%;
+}
+main.banners .activos .elemento button{
+    box-shadow:inset 2px 23px 10px -9px #d65c49;
+	background:linear-gradient(to bottom, #bf2811 5%, #9c200f 100%);
+	background-color:#bf2811;
+	border-radius:11px;
+	border:none;
+	display:inline-block;
+	cursor:pointer;
+	color:#fafafa;
+	font-family:Verdana;
+	font-size:17px;
+	font-weight:bold;
+	padding:20px 20px;
+	text-decoration:none;
+	text-shadow:0px 0px 50px #d63820;
+}
+main.banners .activos .elemento button:hover {
+    background:linear-gradient(to bottom, #9c200f 5%, #bf2811 100%);
+    background-color:#9c200f;
+}
+
+main.banners .desactivados .elemento button{
+    background-color:#44c767;
+	border-radius:17px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:17px;
+	font-weight:bold;
+	padding:20px 20px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+main.banners .desactivados .elemento button:hover {
+    background-color:#5cbf2a;
+}
+
+main.banners section .elemento button:active {
+	position:relative;
+	top:1px;
+}
+
+@media (min-width:769px) {
+    main.banners section img{
+        width: 425px;
+    }
+    main.banners section .elemento{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    main.banners section .container{
+        width: 50%;
+    }
+}

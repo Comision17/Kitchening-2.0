@@ -73,7 +73,7 @@
     .home main .banner img{
         width: 100%;
     }
-    .home main section{
+    .home main section.mostrar-productos{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;

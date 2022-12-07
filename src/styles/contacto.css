@@ -1,0 +1,42 @@
+.contacto section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.contacto h2{
+    width: 100%;
+    text-align: center;
+}
+.contacto .form-creator{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0
+}
+.contacto .form-creator input{
+    padding: 5px;
+    margin: 10px 0c
+}
+.contacto .form-creator textarea{
+    padding: 5px;
+    resize: none;
+}
+  
+.contacto .form-creator .bttn {
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    width: 270px;
+    font-weight: bold;
+    padding: 14px 0px;
+    color: white;
+    background-color: var(--colorRojo);
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
